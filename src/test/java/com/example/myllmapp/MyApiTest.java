@@ -1,6 +1,5 @@
 package com.example.myllmapp;
 
-import io.qameta.allure.restassured.AllureRestAssured;
 import io.restassured.RestAssured;
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.thucydides.core.annotations.WithTag;
@@ -17,7 +16,6 @@ public class MyApiTest {
     @Test
     public void testGet() {
         given()
-            .filter(new AllureRestAssured())
         .when()
             .get("https://www.google.com")
         .then()
