@@ -39,49 +39,50 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 		
-		 <!-- Serenity core -->
-    <dependency>
-        <groupId>net.serenity-bdd</groupId>
-        <artifactId>serenity-core</artifactId>
-        <version>3.4.0</version>
-    </dependency>
+		<!-- Serenity core -->
+		<dependency>
+			<groupId>net.serenity-bdd</groupId>
+			<artifactId>serenity-core</artifactId>
+			<version>3.4.0</version>
+		</dependency>
 
-    <!-- Serenity JUnit -->
-    <dependency>
-        <groupId>net.serenity-bdd</groupId>
-        <artifactId>serenity-junit</artifactId>
-        <version>3.4.0</version>
-    </dependency>
-
+		<!-- Serenity JUnit -->
+		<dependency>
+			<groupId>net.serenity-bdd</groupId>
+			<artifactId>serenity-junit</artifactId>
+			<version>3.4.0</version>
+		</dependency>
 
 		<dependency>
-    <groupId>io.qameta.allure</groupId>
-    <artifactId>allure-rest-assured</artifactId>
-    <version>2.24.0</version>
-</dependency>
+			<groupId>io.qameta.allure</groupId>
+			<artifactId>allure-rest-assured</artifactId>
+			<version>2.24.0</version>
+		</dependency>
 
-		 <dependency>
-        <groupId>io.qameta.allure</groupId>
-        <artifactId>allure-junit5</artifactId>
-        <version>2.24.0</version>
-    </dependency>
 		<dependency>
-      <groupId>io.rest-assured</groupId>
-      <artifactId>rest-assured</artifactId>
-      <scope>test</scope>
-</dependency>
+			<groupId>io.qameta.allure</groupId>
+			<artifactId>allure-junit5</artifactId>
+			<version>2.24.0</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>io.rest-assured</groupId>
+			<artifactId>rest-assured</artifactId>
+			<scope>test</scope>
+		</dependency>
+		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
 			<scope>runtime</scope>
 			<optional>true</optional>
 		</dependency>
+		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		
 	</dependencies>
 
 	<build>
@@ -92,43 +93,40 @@
 			</plugin>
 			
 			<plugin>
-      <groupId>io.qameta.allure</groupId>
-      <artifactId>allure-maven</artifactId>
-      <version>2.11.2</version>
-      <configuration>
-        <!-- Set results directory under target/site -->
-        <resultsDirectory>${project.build.directory}/site/allure-results</resultsDirectory>
-        <!-- Set report directory under target/site -->
-        <reportDirectory>${project.build.directory}/site/allure-report</reportDirectory>
-      </configuration>
-      <executions>
-        <execution>
-          <id>allure-report</id>
-          <phase>verify</phase>
-          <goals>
-            <goal>report</goal>
-          </goals>
-        </execution>
-      </executions>
-    </plugin>
-<<<<<<< HEAD
-=======
+				<groupId>io.qameta.allure</groupId>
+				<artifactId>allure-maven</artifactId>
+				<version>2.11.2</version>
+				<configuration>
+					<!-- Set results directory under target/site -->
+					<resultsDirectory>${project.build.directory}/site/allure-results</resultsDirectory>
+					<!-- Set report directory under target/site -->
+					<reportDirectory>${project.build.directory}/site/allure-report</reportDirectory>
+				</configuration>
+				<executions>
+					<execution>
+						<id>allure-report</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>report</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
 			<plugin>
-    <groupId>net.serenity-bdd.maven.plugins</groupId>
-    <artifactId>serenity-maven-plugin</artifactId>
-    <version>3.4.0</version> <!-- match your Serenity core version -->
-    <executions>
-        <execution>
-            <id>serenity-reports</id>
-            <phase>verify</phase>
-            <goals>
-                <goal>aggregate</goal>
-            </goals>
-        </execution>
-    </executions>
-</plugin>
->>>>>>> refs/remotes/origin/main
+				<groupId>net.serenity-bdd.maven.plugins</groupId>
+				<artifactId>serenity-maven-plugin</artifactId>
+				<version>3.4.0</version> <!-- match your Serenity core version -->
+				<executions>
+					<execution>
+						<id>serenity-reports</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>aggregate</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
 	</build>
-
 </project>
