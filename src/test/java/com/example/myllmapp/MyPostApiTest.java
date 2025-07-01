@@ -1,6 +1,5 @@
 package com.example.myllmapp;
 
-import io.qameta.allure.restassured.AllureRestAssured;
 import org.junit.Test;
 
 import static io.restassured.RestAssured.given;
@@ -13,7 +12,6 @@ public class MyPostApiTest {
         String requestBody = "{ \"name\": \"John\", \"job\": \"Developer\" }";
 
         given()
-            .filter(new AllureRestAssured())    // Attach request/response to Allure report
             .contentType("application/json")
             .body(requestBody)
         .when()
