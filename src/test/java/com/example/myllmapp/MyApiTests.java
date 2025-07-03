@@ -1,17 +1,12 @@
 package com.example.myllmapp;
 
 import io.restassured.RestAssured;
-import net.serenitybdd.junit.runners.SerenityRunner;
-import net.thucydides.core.annotations.WithTag;
 
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
 
-@WithTag(name = "api-tests", type = "category")
-@RunWith(SerenityRunner.class)
-public class MyApiTest {
+public class MyApiTests  {
 
     @Test
     public void testGet() {
